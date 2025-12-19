@@ -1,5 +1,5 @@
 {
-  "name": "HumanRisk-Dashboard",
+  "name": "HumanRiskCloud",
   "description": "A unified human-cyber risk management platform tailored for SMEs, correlating behavioral analytics, phishing simulation, and access patterns into a single Human Risk Score.",
   "requestFramePermissions": []
 }

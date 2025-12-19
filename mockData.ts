@@ -1,4 +1,4 @@
-import { RiskLevel, UserRiskProfile, RiskEventLog } from './types';
+import { RiskLevel, UserRiskProfile, RiskEventLog, TimelineEvent } from './types';
 
 export const HIGH_RISK_USERS: UserRiskProfile[] = [
   { id: '1', name: 'James Smith', department: 'Sales', role: 'Sales Rep', riskScore: 91, phishingRisk: 'Yes', anomaliesDetected: 4, lastActivity: '3 hours ago', email: 'j.smith@company.com', avatarUrl: 'https://picsum.photos/100/100?random=1' },
@@ -19,6 +19,23 @@ export const RISK_EVENTS: RiskEventLog[] = [
   { id: '6', user: 'Linda Taylor', event: 'Failed login attempts (10+)', riskLevel: 7, date: '2 months ago', timeAgo: '2 months ago' },
 ];
 
+export const USER_TIMELINE_DATA: TimelineEvent[] = [
+  { id: 't1', date: 'Mar. 26', event: 'Clicked phishing email', type: 'phishing', isCritical: true },
+  { id: 't2', date: 'Mar. 22', event: 'New device: Laptop ABC123', type: 'device' },
+  { id: 't3', date: 'Mar. 22', event: 'Off-hours login at 3:12 AM', type: 'access' },
+  { id: 't4', date: 'Mar. 17', event: 'Bulk download of 1:100 files', type: 'behavior' },
+  { id: 't5', date: 'Mar. 2', event: 'Clicked phishing email', type: 'phishing', isCritical: true },
+];
+
+export const INDIVIDUAL_RISK_TREND = [
+  { day: '26 Feb', score: 62 },
+  { day: '1 Mar', score: 65 },
+  { day: '10 Mar', score: 63 },
+  { day: '17 Mar', score: 75 },
+  { day: '22 Mar', score: 82 },
+  { day: '26 Mar', score: 87 },
+];
+
 export const DEPARTMENT_DATA = [
   { name: 'Sales', risk: 80 },
   { name: 'Finance', risk: 60 },
@@ -27,12 +44,21 @@ export const DEPARTMENT_DATA = [
 ];
 
 export const RISK_OVER_TIME_DATA = [
-  { name: 'Oct', score: 68 },
-  { name: 'Nov', score: 70 },
-  { name: 'Dec', score: 65 },
-  { name: 'Jan', score: 72 },
-  { name: 'Feb', score: 69 },
-  { name: 'Mar', score: 72 },
+  { name: 'July', score: 68 },
+  { name: 'August', score: 70 },
+  { name: 'September', score: 65 },
+  { name: 'October', score: 72 },
+  { name: 'November', score: 69 },
+  { name: 'December', score: 72 },
+];
+
+export const PHISHING_CLICK_RATE_TREND = [
+  { month: 'July', rate: 32 },
+  { month: 'Aug', rate: 28 },
+  { month: 'Sept', rate: 35 },
+  { month: 'Oct', rate: 23 },
+  { month: 'Nov', rate: 19 },
+  { month: 'Dec', rate: 23 },
 ];
 
 export const PHISHING_CAMPAIGNS = [

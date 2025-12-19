@@ -27,6 +27,14 @@ export interface RiskEventLog {
   timeAgo: string;
 }
 
+export interface TimelineEvent {
+  id: string;
+  date: string;
+  event: string;
+  type: 'phishing' | 'device' | 'access' | 'behavior';
+  isCritical?: boolean;
+}
+
 export interface DepartmentStat {
   name: string;
   riskScore: number;
